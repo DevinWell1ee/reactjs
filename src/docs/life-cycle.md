@@ -1,0 +1,24 @@
+react v16.3，最大的变动莫过于生命周期去掉了以下三个
+
+componentWillMount
+componentWillReceiveProps
+componentWillUpdate
+
+同时为了弥补失去上面三个周期的不足又加了两个
+
+static getDerivedStateFromProps
+getSnapshotBeforeUpdate
+
+
+
+static getDerivedStateFromProps
+触发时间(v16.4修正)：组件每次被rerender的时候，包括在组件构建之后(虚拟dom之后，实际dom挂载之前)，每次获取新的props或state之后。在v16.3版本时，组件state的更新不会触发该生命周期。
+每次接收新的props之后都会返回一个对象作为新的state，返回null则说明不需要更新state.
+配合componentDidUpdate，可以覆盖componentWillReceiveProps的所有用法
+
+getSnapshotBeforeUpdate
+触发时间: update发生的时候，在render之后，在组件dom渲染之前。
+返回一个值，作为componentDidUpdate的第三个参数。
+配合componentDidUpdate, 可以覆盖componentWillUpdate的所有用法。
+
+https://juejin.im/post/5aca20c96fb9a028d700e1ce
