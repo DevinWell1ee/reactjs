@@ -11,3 +11,5 @@ react-dom 负责把这个用来描述 UI 信息的 JavaScript 对象变成 DOM �
 
 
 jsx 首字母大些？
+
+https://react.docschina.org/docs/introducing-jsx.html

@@ -15,10 +15,14 @@ class Parent extends Component {
   }
 
   changeNumber(number) {
-    this.setState({ // 异步
+    /* this.setState({ // 异步
       number
     }, () => {
       console.log('nextTick')
+    }) */
+
+    this.setState((state, props) => {
+      return { number }
     })
   }
 
@@ -36,3 +40,5 @@ class Parent extends Component {
 }
 
 export default Parent
+
+

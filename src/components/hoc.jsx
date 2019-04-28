@@ -33,3 +33,4 @@ var OriginalTitle  = ({ remoteTitle }) =>
 var EnhancedTitle = enhanceComponent(OriginalTitle);
 
 export default EnhancedTitle
+

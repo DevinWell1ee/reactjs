@@ -21,7 +21,6 @@ class Event extends Component {
   render () {
     return (
       <div>
-        <button onClick={ this.handleClick }>event click</button>
         <button onClick={ this.handleClick.bind(this) }>event click</button>
         <button onClick={ this._handleClick }>event click</button>
         <button onClick={ () => this.handleClick('xxx') }>event click</button>

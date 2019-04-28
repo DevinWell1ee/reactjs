@@ -21,6 +21,7 @@ export const randomSaga = function(state = '', action) {
 }
 
 
+
 // 计数器retucer
 const counterState = Immutable.fromJS({ counter: 0 })
 
@@ -57,15 +58,15 @@ const todos = (state = [
           completed: false
         }
       ]
-    // case TOGGLE_TODO:
-    //   return state.map((todo, index) => {
-    //     if (index === action.index) {
-    //       return Object.assign({}, todo, {
-    //         completed: !todo.completed
-    //       })
-    //     }
-    //     return todo
-    //   })
+    case TOGGLE_TODO:
+      return state.map((todo, index) => {
+        if (index === action.index) {
+          return Object.assign({}, todo, {
+            completed: !todo.completed
+          })
+        }
+        return todo
+      })
     default:
       return state
   }

@@ -56,3 +56,8 @@ redux-thunk
 
 reslector
   优化，缓存
+
+
+https://redux-saga-in-chinese.js.org/docs/introduction/BeginnerTutorial.html
+https://www.redux.org.cn/docs/basics/ExampleTodoList.html
+https://sangka.github.io/react-in-patterns-cn/chapter-9/
